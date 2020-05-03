@@ -59,7 +59,6 @@ class RenameCommand(commands.Cog):
         await ctx.send(f"List length changed from {_old} to {len(self.storage.names_male)}")
 
     @commands.command()
-    @commands.has_any_role("Menschen erster Klasse", "Edelmann")
     async def rename(self, ctx: commands.Context, victim: typing.Union[discord.Role, discord.Member, str],
                      bypass_ignore: typing.Optional[str] = "false"):
         """ Rename the entire server or perhaps only one player?
